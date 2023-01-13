@@ -85,6 +85,7 @@
           >
             <h2>Nhập vào số KM</h2>
             <input
+              id="inputKM"
               class="input100"
               type="text"
               name="name"
@@ -98,6 +99,7 @@
           >
             <h2>Nhập thời gian chờ</h2>
             <input
+              id="inputTime"
               class="input100"
               type="text"
               name="name"
@@ -108,11 +110,12 @@
 
           <div class="wrap-contact100-form-btn">
             <div class="contact100-form-bgbtn"></div>
-            <button type="button" class="contact100-form-btn">TÍNH TIỀN</button>
+            <button id="payBtn" type="button" class="contact100-form-btn">TÍNH TIỀN</button>
           </div>
           <div class="wrap-contact100-form-btn">
             <div class="contact100-form-bgbtn"></div>
             <button
+              id="billBtn"
               type="button"
               class="contact100-form-btn"
               data-toggle="modal"
@@ -133,16 +136,56 @@
         </div>
       </div>
     </div>
+    
+    <!-- The Modal -->
+    <div class="modal" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Hóa đơn</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Chi Tiết</th>
+                  <th>Sử dụng</th>
+                  <th>Đơn giá</th>
+                  <th>Thành tiền</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                
+              </tbody>
+            </table>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
 
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
     <script src="vendor/animsition/js/animsition.min.js"></script>
     <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.min.js"></script>
+    <!--===============================================================================================-->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
     <script src="js/map-custom.js"></script>
     <!--===============================================================================================-->
+    <script src="./js/main.js"></script>
   </body>
 </html>
